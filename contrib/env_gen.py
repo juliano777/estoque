@@ -15,7 +15,7 @@ ALLOWED_HOSTS = '127.0.0.1, localhost'
 DB_HOST = 'localhost'
 DB_NAME = 'db_estoque'
 DB_USER = 'user_estoque'
-DB_PASSWORD = '123
+DB_PASSWORD = '123'
 DB_PORT = 5432
 """.strip()
 

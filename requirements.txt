@@ -4,6 +4,7 @@ django-extensions
 django-widget-tweaks
 Django
 pandas
+psycopg2-binary
 pytz
 six
 sqlparse

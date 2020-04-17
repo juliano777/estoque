@@ -23,8 +23,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Configuration file location
 CONF_FILE = f'{BASE_DIR}/.env'
 
-print(CONF_FILE)
-
 # Read the configurations from file
 CONFIG = ConfigObj(CONF_FILE)
 
