@@ -1,0 +1,3 @@
+CREATE ROLE user_estoque ENCRYPTED PASSWORD '123' LOGIN;
+
+CREATE DATABASE db_estoque OWNER user_estoque;
