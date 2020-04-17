@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-from decouple import config, Csv
+from configobj import ConfigObj
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,14 +20,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
+# Configuration file location
+CONF_FILE = f'{BASE_DIR}/.env'
+
+# Read the configurations from file
+CONFIG = ConfigObj(CONF_FILE)
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = CONFIG['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = CONFIG['DEBUG']
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[], cast=Csv())
-
+ALLOWED_HOSTS = CONFIG['ALLOWED_HOSTS']
 
 # Application definition
 
