@@ -11,7 +11,7 @@ chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
 CONFIG_STRING = f"""
 DEBUG = True
 SECRET_KEY = '{get_random_string(50, chars)}'
-ALLOWED_HOSTS = '127.0.0.1, localhost'
+ALLOWED_HOSTS = 'localhost', '127.0.0.1', '[::1]'
 DB_HOST = 'localhost'
 DB_NAME = 'db_estoque'
 DB_USER = 'user_estoque'
